@@ -32,7 +32,7 @@ class hasher {
     size_t length;
 
     void pop();
-    void append(char16_t c);
+    void append();
     hash iter();
 
   public:
