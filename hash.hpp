@@ -21,18 +21,20 @@ class hasher {
   private:
     /* reference string */
     const string &S;
-    size_t s_offset;
 
-    /* roll value */
-    /* TODO: check what happend when you multiply 64bit vars*/
-    size_t base;
-    uint64_t mod;
-    uint64_t pop_const;
-    uint64_t roll;
-    size_t length;
+    /* roll attributes */
+    size_t roll_offset;
+    size_t roll_length;
 
+    size_t roll_base;
+    uint64_t roll_mod;
+    uint64_t roll_val;
+
+    const uint64_t pop_const;
     void pop();
+
     void append();
+
     hash iter();
 
   public:
