@@ -10,6 +10,13 @@ using std::ostream;
 using std::vector;
 
 typedef uint64_t hash;
+
+class hash_filter {
+  public:
+    virtual void append(const hash &) = 0;
+    virtual vector<hash> into_vec() = 0;
+};
+
 class hasher {
   private:
     /* reference string */
@@ -31,5 +38,5 @@ class hasher {
   public:
     hasher(size_t length, const string &S);
     ~hasher();
-    vector<hash> consume();
+    vector<hash> consume(hash_filter &);
 };
