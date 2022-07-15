@@ -20,7 +20,7 @@ class hash_filter {
 class hasher {
   private:
     /* reference string */
-    const string &S;
+    const string *S;
 
     /* roll attributes */
     size_t roll_offset;
@@ -38,7 +38,8 @@ class hasher {
     hash iter();
 
   public:
-    hasher(size_t length, const string &S);
+    hasher(size_t length);
     ~hasher();
+    void feed(const string &);
     vector<hash> consume(hash_filter &);
 };
