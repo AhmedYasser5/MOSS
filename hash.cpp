@@ -3,7 +3,7 @@
 #include <math.h>
 #include <time.h>
 
-/* TODO: check what happend when you multiply 64bit vars */
+/* TODO: check what happens when you multiply 64bit vars */
 /* TODO: add min and max args to the random prime generator */
 /* TODO: impl(pow_mod) */
 
