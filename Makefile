@@ -13,7 +13,7 @@ SRC_DIR = .
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
 	${CXX} ${CXXFLAGS} -c -o $@ $^
 
-build-%: $(BUILD_DIR)/%.o
+build-%.cpp: $(BUILD_DIR)/%.o
 
 .PHONY: lint-%
 lint-%:
