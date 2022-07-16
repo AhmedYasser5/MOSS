@@ -1,9 +1,17 @@
 #pragma once
 
+/* TODO: find a way to automate generating error codes */
+
+#define EXIT_WINNOWING_UNDEFINED_STATE 1
+
 #include "hash.hpp"
 #include "minstack.hpp"
 
 #include <stdint.h>
+#include <stdio.h>
+
+using std::cout;
+using std::endl;
 
 class winnowingFilter : hash_filter {
 private:

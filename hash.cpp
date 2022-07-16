@@ -3,10 +3,8 @@
 #include <math.h>
 #include <time.h>
 
-/* TODO: check what happens when you multiply 64bit vars */
-/* TODO: add min and max args to the random prime generator */
-/* TODO: impl(pow_mod) */
 
+/* TODO: extract math to a separate file. */
 bool is_prime(uint64_t n) {
   for (size_t i = 0; i < sqrt(n) + 1; i++) {
     if (i * i == n) {
@@ -16,6 +14,7 @@ bool is_prime(uint64_t n) {
   return true;
 }
 
+/* TODO: add min and max args to the random prime generator. */
 uint64_t gen_prime() {
   uint64_t p;
   srand(time(NULL));
@@ -23,6 +22,7 @@ uint64_t gen_prime() {
   return p;
 }
 
+/* TODO: impl(pow_mod). */
 uint64_t pow_mod(uint64_t b, uint64_t p, uint64_t roll_mod) {
   
 }
@@ -52,6 +52,7 @@ void hasher::pop() {
   roll_offset += 1;
 }
 
+/* TODO: check what happens when you multiply 64bit vars. */
 void hasher::append() {
   roll_val = (roll_val * roll_base) % roll_mod;
   roll_val += S->at(roll_offset + roll_length);

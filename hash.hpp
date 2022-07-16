@@ -10,7 +10,9 @@ using std::ostream;
 using std::vector;
 
 typedef uint64_t hash;
+#define HASH_MAX UINT64_MAX
 
+/* TODO: add hash offsets to the returned vector from filters. */
 class hash_filter {
   public:
     virtual void append(const hash &) = 0;
