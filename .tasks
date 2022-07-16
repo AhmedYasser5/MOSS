@@ -1,0 +1,11 @@
+[file-build]
+command=make build-$(VIM_FILENAME)
+
+[file-format]
+command=make format-$(VIM_FILENAME)
+
+[file-lint]
+command=make lint-$(VIM_FILENAME)
+
+[file-list-todos]
+command=make list-todos-$(VIM_FILENAME) | sed 's/^\([[:digit:]]\+\):\(TODO\): /$(VIM_FILENAME):\1: /g'
