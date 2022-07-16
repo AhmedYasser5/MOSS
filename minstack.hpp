@@ -13,7 +13,7 @@ private:
     T &el_val;
     T &st_min;
   };
-  vector<const stElem> st;
+  vector<stElem> st;
 
 public:
   minStack(const size_t size);
